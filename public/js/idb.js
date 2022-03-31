@@ -45,7 +45,7 @@ request.onerror = function(evt) {
 // This function will be executed if we attempt to submit a new budget and there's no internet connection
 function saveRecord(record) {
     // open a new transaction with the database with read and write permissions
-    const transaction = db.transaction('new_budget', 'readwrite');
+    const transaction = db.transaction(['new_budget'], 'readwrite');
 
     // access the object store for `new_budget`
     const budgetObjectStore = transaction.objectStore('new_budget');
@@ -58,7 +58,7 @@ function saveRecord(record) {
 // create a function that will handle collecting all of the data from the new_budget object store in IndexedDB and POST it to the server
 function uploadBudget() {
     // open a transaction pn your db
-    const transaction = db.transaction('new_budget', 'readwrite');
+    const transaction = db.transaction(['new_budget'], 'readwrite');
 
     // access the object store
     const budgetObjectStore = transaction.objectStore('new_budget');
@@ -70,7 +70,7 @@ function uploadBudget() {
     getAll.onsuccess = function() {
         // if there was data in indexedDB's store, let's send it to the api server
         if (getAll.result.length > 0) {
-            fetch('/api/transaction', {
+            fetch('/api/transaction/bulk', {
                     method: 'POST',
                     body: JSON.stringify(getAll.result),
                     headers: {
@@ -84,7 +84,7 @@ function uploadBudget() {
                         throw new Error(ServerResponse);
                     }
                     // open one more transaction
-                    const transaction = db.transaction('new_budget', readwrite);
+                    const transaction = db.transaction(['new_budget'], readwrite);
                     // access the new_budget object store
                     const budgetObjectStore = transaction.objectStore('new_budget');
                     // clear all items in your store
