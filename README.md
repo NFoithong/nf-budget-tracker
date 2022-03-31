@@ -9,7 +9,7 @@
 - [Acceptance Criteria](#acceptance-criteria)
 - [Installation](#installation)
 - [Mockup](#mockup)
-- [Useage/getting-started](#usage/getting started)
+- [Usage](#usage)
 - [Link to deployed Heroku application:](#link-to-deployed-heroku-application)
 - [Contributors](#contributors)
 ## Technologies
