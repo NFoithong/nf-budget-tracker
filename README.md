@@ -42,7 +42,7 @@ IndexedDB, PWA, MongoDB
 - Need to add a web manifest to your application with the app’s metadata, to let users’ devices know what they’re installing and how the app should look on the home screen.
 
 ## Link to deployed application:
-GitHub: https://github.com/NFoithong/nf-budget-tracker.git
+GitHub: https://github.com/NFoithong/nf-budget-tracker.git <br>
 Heroku: https://enigmatic-falls-71219.herokuapp.com/
 
 ## Contributors
