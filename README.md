@@ -9,7 +9,7 @@
 - [Acceptance Criteria](#acceptance-criteria)
 - [Installation](#installation)
 - [Mockup](#mockup)
-- [Usage](#usage)
+- [Usage/Getting-Started](#usage/getting-started)
 - [Link to deployed Heroku application:](#link-to-deployed-heroku-application)
 - [Contributors](#contributors)
 ## Technologies
@@ -32,7 +32,7 @@ THEN the deposits or expenses added while they were offline are added to their t
 IndexedDB, PWA, MongoDB
 ## Mockup
 
-## Usage/Getting Started
+## Usage/Getting-Started
 ### Offline Functionality
 - Use IndexedDB to add offline functionality. Add Offline Persistence with IndexedDB as a refresher on how to add this to your application.
 - Add a service worker to your application. Progressive Web Applications (PWA), Using Service Workers as a refresher on how to add this to your application.
